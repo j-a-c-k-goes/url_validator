@@ -2,7 +2,7 @@
 const prompt = require('prompt-sync')({sigint: true});
 const URL = require('url').URL;
 
-// - - - ionput url - - -
+// - - - input url - - -
 function get_url(){
 	try{
 		const url = prompt('enter a url to validate: ');
