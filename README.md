@@ -10,7 +10,7 @@ Simple URL validator.
 
 ## 🎬 Run
 ```cd url_validator
-npm start
+npm run start
 ```
 
 ## 🆘 Ways to contribute
