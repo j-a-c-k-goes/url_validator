@@ -8,21 +8,22 @@ function get_url(){
 		const url = prompt('enter a url to validate: ');
 		console.log(`input received\t${url}`);
 		return url;
-	} catch(error){
-
-	}
+	} catch(error){ console.error(error); return 1;}
 };
 
 // - - - validate the url - - -
 function validate_url (url) {
 	try{
 		new URL(url);
-		return {msg: `${url}\t✅`, status: true};
+		return {msg: `${url}\t✅`, status: 0};
 	} catch (error) {
-		return {msg: `${url}\t👎`, status: false};
+		console.error(error);
+		return {msg: `${url}\t👎`, status: 1};
 	}
 };
 
-// - - - check the input value - - -
+// - - - bind function to variable with prompt result as the function's input - - -
 const check_url = validate_url(get_url()).msg;
-console.log(check_url);
+
+// - - - log to console - - -
+console.info(check_url);
